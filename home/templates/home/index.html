@@ -1,0 +1,378 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qubrix Associates | Wealth & Stock Advisory</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 200 200" fill="none">
+          <rect width="200" height="200" rx="40" fill="#4733e8"/>
+          <polygon points="100,32 152,62 125,78 73,48" fill="#e2e8f0" opacity="0.95"/>
+          <polygon points="152,62 152,112 125,128 125,78" fill="#cbd5e1" opacity="0.8"/>
+          <polygon points="100,32 73,48 73,98 48,82 48,62" fill="#ffffff"/>
+          <polygon points="82,90 120,112 100,148 62,126" fill="#ffffff"/>
+          <polygon points="100,148 135,128 152,138 117,158" fill="#e2e8f0"/>
+          <polygon points="62,126 100,148 117,158 80,172 45,152" fill="#ffffff"/>
+        </svg>
+        <div class="logo-text-wrap">
+          <span class="logo-title">Qubrix</span>
+          <span class="logo-sub">ASSOCIATES</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about-us">About us</a></li>
+        <li><a href="#faces">Faces</a></li>
+        <li><a href="#our-vision">Our Vision</a></li>
+        <li><a href="#funds">Funds</a></li>
+        <li><a href="#aum">AUM</a></li>
+        <li><a href="#calculators">SIP Calculator</a></li>
+        <li><a href="#contact">Enquiry</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" id="overview">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="badge badge-purple" style="margin-bottom: 1rem;">Indian Wealth & Stock Advisory</span>
+        <h1>Long-Term Wealth Creation with <span>Qubrix Associates</span>.</h1>
+        <p>Specialized wealth advisory focusing on Indian equity research, structured mutual fund portfolios, and disciplined SIP strategies tailored to your financial timeline.</p>
+        <div class="hero-actions">
+          <a href="#calculators" class="btn btn-primary">SIP Calculator →</a>
+          <button class="btn btn-outline" id="heroVerifyBtn">Verify Phone</button>
+        </div>
+      </div>
+      <div class="hero-summary-box">
+        <h3>Advisory Disciplines</h3>
+        <p>Transparent, research-backed allocation across leading fund houses and market equity baskets.</p>
+        <div class="summary-list">
+          <div class="summary-row">
+            <span>Stock & Equity Desk</span>
+            <strong style="color: var(--primary);">Mirae Asset Sharekhan</strong>
+          </div>
+          <div class="summary-row">
+            <span>Direct Mutual Funds</span>
+            <strong>PPFAS & Mirae Asset</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section id="about-us" class="flow-card">
+      <span class="badge badge-purple">Firm Overview</span>
+      <h1>About Us</h1>
+      <h3 class="sub-title" id="company">About the Company</h3>
+      <p class="lead">
+        Qubrix Associates is a specialized wealth advisory practice catering to Indian professionals, families, and entrepreneurs. Partnering directly with high-conviction research desks such as <strong>Mirae Asset Sharekhan</strong>, we help investors build robust equity portfolios, manage systematic mutual fund holdings, and maintain disciplined long-term capital preservation.
+      </p>
+    </section>
+
+    <section id="faces" class="flow-card faces-card">
+      <span class="badge badge-purple" style="margin-bottom: 1.25rem;">Leadership & Advisory</span>
+      <div class="faces-grid">
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Partner Photo</span>
+        </div>
+        <div>
+          <h2 class="person-name">About Person</h2>
+          <div class="person-role">Managing Director & Principal Wealth Strategist</div>
+          <p class="person-bio">With over 18 years in Indian capital markets, our principal strategist oversees portfolio structuring, market timing defense, and direct equity research in strict adherence to regulatory standards and client-centric fiduciary values.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-vision" class="flow-card">
+      <span class="badge badge-purple">Fiduciary Core</span>
+      <h2>Vision of the Company Objective</h2>
+      <p class="lead" style="max-width: 680px; font-size: 1rem;">To deliver research-backed, conflict-free compounding strategies that empower Bharat's investors to reach generational financial independence.</p>
+      <div class="vision-pillars">
+        <div class="pillar-item">01. Direct Equity Rigor</div>
+        <div class="pillar-item">02. Fiduciary Priority</div>
+        <div class="pillar-item">03. Multidecadal Vision</div>
+      </div>
+    </section>
+
+    <section id="funds" class="flow-card">
+      <span class="badge badge-purple">Core Baskets</span>
+      <h2>Funds Carousel</h2>
+      <p style="color: var(--slate); font-size: 0.9rem;">Explore our curated funds and research partner holdings.</p>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="fund-slide">
+            <span class="badge badge-green">Direct Equity Desk</span>
+            <h4>Mirae Asset Sharekhan</h4>
+            <p>High-conviction stock research</p>
+            <div class="fund-return">+24.6% 3Y CAGR</div>
+          </div>
+          <div class="fund-slide">
+            <span class="badge badge-purple">Flexi Cap</span>
+            <h4>Parag Parikh Flexi Cap</h4>
+            <p>Global & Indian equity balance</p>
+            <div class="fund-return">+22.1% 3Y CAGR</div>
+          </div>
+          <div class="fund-slide">
+            <span class="badge badge-purple">Large Cap</span>
+            <h4>Mirae Asset Large Cap</h4>
+            <p>Bluechip market leaders</p>
+            <div class="fund-return">+17.4% 3Y CAGR</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav-btns">
+        <button class="carousel-btn" id="carouselPrev">‹</button>
+        <button class="carousel-btn" id="carouselNext">›</button>
+      </div>
+    </section>
+
+    <section id="aum" class="flow-card">
+      <span class="badge badge-green">Portfolio Scale</span>
+      <h2>Assets Under Management (AUM)</h2>
+      <div class="aum-number">₹580+ Crores</div>
+      <p class="aum-text">Cumulative client capital managed across direct stock equities, systematic SIP mutual funds, and fixed-income assets.</p>
+    </section>
+
+    <div class="verify-cta">
+      <button class="btn btn-primary" id="ctaVerifyBtn">📱 Phone Verify</button>
+      <p>Complete quick mobile verification to connect directly with an advisor.</p>
+    </div>
+
+  </div>
+
+  <section id="calculators" class="calc-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-green" style="margin-bottom: 0.5rem;">Wealth Projection</span>
+        <h2>SIP & Growth Calculator</h2>
+        <p>Estimate the compounding growth of regular monthly investments or a one-time capital placement.</p>
+      </div>
+
+      <div class="calculator-wrapper">
+        <div class="calc-tabs">
+          <button class="calc-tab active" id="calcTabSip">Monthly SIP</button>
+          <button class="calc-tab" id="calcTabLump">Lump-Sum Investment</button>
+        </div>
+
+        <div class="calc-layout">
+          <div>
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span id="labelInvestment">Monthly Investment Amount</span>
+                <span class="slider-val-box" id="dispInvestAmount">₹10,000</span>
+              </div>
+              <input type="range" id="sliderAmount" min="500" max="200000" step="500" value="10000">
+              <div class="slider-scale"><span>₹500</span><span id="amountMaxLabel">₹2,00,000</span></div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Expected Annual Return Rate (p.a)</span>
+                <span class="slider-val-box" id="dispReturnRate">12.5%</span>
+              </div>
+              <input type="range" id="sliderRate" min="5" max="25" step="0.5" value="12.5">
+              <div class="slider-scale"><span>5% (Conservative)</span><span>15% (Equity)</span><span>25% (Aggressive)</span></div>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span>Investment Horizon</span>
+                <span class="slider-val-box" id="dispTenure">10 Years</span>
+              </div>
+              <input type="range" id="sliderTenure" min="1" max="30" step="1" value="10">
+              <div class="slider-scale"><span>1 Year</span><span>15 Years</span><span>30 Years</span></div>
+            </div>
+          </div>
+
+          <div class="calc-results-card">
+            <div class="chart-box"><canvas id="calculatorChart"></canvas></div>
+            <div class="result-grid">
+              <div class="result-item">
+                <span>Invested Capital</span>
+                <div id="resInvested">₹12,00,000</div>
+              </div>
+              <div class="result-item green">
+                <span>Estimated Returns</span>
+                <div id="resGains">₹13,23,391</div>
+              </div>
+            </div>
+            <div class="result-total">
+              <span>Total Projected Corpus</span>
+              <h3 id="resTotal">₹25,23,391</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <div class="section-header">
+      <span class="badge badge-purple" style="margin-bottom: 0.5rem;">The Enquiry</span>
+      <h2>Send an Enquiry</h2>
+    </div>
+
+    <div class="contact-card">
+      <form id="enquiryForm" method="post" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="enquiryName">Full Name</label>
+          <input id="enquiryName" name="name" type="text" placeholder="e.g. Rahul Sharma" autocomplete="off" required>
+        </div>
+
+        <div class="enquiry-contact-grid">
+          <div class="form-group">
+            <label for="enquiryPhone">Phone Number</label>
+            <div class="enquiry-otp-row">
+              <input id="enquiryPhone" name="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" autocomplete="off" required>
+              <button type="button" class="btn btn-primary btn-sm" id="enquirySendBtn">Send OTP</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enquiryEmail">Email Address</label>
+            <input id="enquiryEmail" name="email" type="email" placeholder="name@domain.com" autocomplete="off" required>
+          </div>
+        </div>
+
+        <div class="captcha-box cf-turnstile" id="enquiryCaptcha" data-sitekey="1x00000000000000000000AA"></div>
+
+        <div class="form-group otp-block" id="enquiryOtpBlock">
+          <div class="otp-head">
+            <label for="enquiryCode">Verification Code</label>
+            <button type="button" class="link-btn" id="enquiryResendBtn" disabled>Resend OTP</button>
+          </div>
+          <div class="enquiry-otp-row">
+            <input id="enquiryCode" name="otp" type="text" inputmode="numeric" maxlength="6" placeholder="Enter verification code" autocomplete="off" disabled required>
+            <button type="button" class="btn btn-primary btn-sm" id="enquiryVerifyBtn" hidden>Verify Code</button>
+          </div>
+          <small id="enquiryOtpStatus" class="enquiry-otp-status" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="enquiryMessage">Message</label>
+          <textarea id="enquiryMessage" name="message" rows="3" placeholder="Tell us your target horizon, risk preference, or planned investment capital..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-btn" id="enquirySubmit" disabled>Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="phoneVerifyModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modalCloseBtn">✕</button>
+
+      <div id="verifyFormContainer">
+        <div class="modal-head">
+          <span class="badge badge-purple">Investor Verification</span>
+          <h3>Client Details</h3>
+        </div>
+
+        <form id="otpVerifyForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="inputFirstName">First Name</label>
+              <input type="text" id="inputFirstName" placeholder="First Name" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName">Last Name</label>
+              <input type="text" id="inputLastName" placeholder="Last Name" autocomplete="off" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputPhone">Phone Number</label>
+            <div class="phone-row">
+              <input type="tel" id="inputPhone" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="off" required>
+              <button type="button" class="btn btn-primary btn-sm" id="btnSendOtp">Send OTP</button>
+            </div>
+          </div>
+
+          <div class="captcha-box cf-turnstile" id="modalCaptcha" data-sitekey="1x00000000000000000000AA"></div>
+
+          <div id="otpStatusMsg" class="status-msg"></div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <div class="otp-label-row">
+              <label for="inputOtp">Enter OTP</label>
+              <button type="button" class="link-btn btn-disabled" id="btnResendOtp">Resend OTP</button>
+            </div>
+            <input type="text" id="inputOtp" class="otp-input" placeholder="••••" maxlength="4" autocomplete="off" disabled>
+            <small class="otp-note">Auto-submits instantly once the 4-digit code is typed.</small>
+          </div>
+
+          <div id="otpSubmitStatus" class="status-msg" style="text-align: center;"></div>
+        </form>
+      </div>
+
+      <div id="verifySuccessScreen" class="verified-screen">
+        <div class="verified-icon">✓</div>
+        <h2>Phone Verified!</h2>
+        <p id="successClientDetail"></p>
+        <button class="btn btn-primary full-btn" id="successDoneBtn">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="28" height="28" viewBox="0 0 200 200" fill="none">
+            <rect width="200" height="200" rx="40" fill="#4733e8"/>
+            <polygon points="100,32 152,62 125,78 73,48" fill="#ffffff"/>
+            <polygon points="82,90 120,112 100,148 62,126" fill="#ffffff"/>
+          </svg>
+          <span>Qubrix Associates</span>
+        </div>
+        <p class="footer-about">Disciplined wealth management and equity advisory for retail and family office investors in India. Built on research, transparency, and strategic compounding.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about-us">About Company</a></li>
+          <li><a href="#faces">Leadership</a></li>
+          <li><a href="#funds">Funds Carousel</a></li>
+          <li><a href="#aum">AUM Metrics</a></li>
+          <li><a href="#calculators">SIP Calculator</a></li>
+          <li><a href="#contact">Contact Advisory</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact</h4>
+        <ul class="footer-links">
+          <li>Email: qubrixassociates@gmail.com</li>
+          <li>Tel: +91 88288 11107</li>
+          <li>Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong>Statutory Disclaimer:</strong> Mutual fund investments and equity securities are subject to market risks. Read all scheme and offer-related documents carefully before investing. Historical performance and CAGR metrics are indicative and do not guarantee future returns. Qubrix Associates provides informational and advisory guidance only.
+    </div>
+  </footer>
+
+  <script src="{% static 'home/script.js' %}"></script>
+</body>
+</html>
