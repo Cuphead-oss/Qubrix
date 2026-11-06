@@ -136,4 +136,3 @@ class valdiateOtp(viewsets.ViewSet):
       print(cache_)
       return Response({'message':'Ok'})
    
-   
