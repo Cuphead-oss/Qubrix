@@ -123,7 +123,7 @@ class valdiateOtp(viewsets.ViewSet):
       print('<---------------------------submited to end point')
       key=request.session.session_key
       cache_=cache.get(key)
-      if cache in None:
+      if cache is None:
          return Response({"message":False},status=status.HTTP_400_BAD_REQUEST)
       phone=request.data.get('phone')
       name=request.data.get('name')
@@ -137,5 +137,4 @@ class valdiateOtp(viewsets.ViewSet):
          print(ser.data)
       cache_=cache.get(request.session.session_key)
       print(cache_)
-      return Response({'message':'Ok'})
-   
+      return Response({'message':'Ok'})      

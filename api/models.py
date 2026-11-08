@@ -8,5 +8,3 @@ class Enquiry(models.Model):
     email=models.EmailField()
     enq=models.TextField()
     submitted_on=models.DateTimeField(auto_now_add=True)
-
-
