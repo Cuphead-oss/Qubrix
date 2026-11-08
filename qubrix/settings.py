@@ -146,3 +146,13 @@ CACHES = {
     }
 }
 
+REST_FRAMEWORK = {
+
+    'DEFAULT_THROTTLE_RATES': {
+
+        'Otpburst': '2/min',
+
+        'Otpsustained': '30/hour',
+
+    }
+}

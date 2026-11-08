@@ -10,6 +10,7 @@ from .serlizer import EnqSerilizer
 import requests
 import secrets
 import os
+from qubrix.thor import OtpBurstThrottle, OtpSustainedThrottle
 # Create your views here.
 
 def generate_secure_otp(length=6):
@@ -17,6 +18,7 @@ def generate_secure_otp(length=6):
     return "".join(secrets.choice("0123456789") for _ in range(length))
 
 class generateCode(viewsets.ViewSet):
+    throttle_classes=[OtpBurstThrottle,OtpSustainedThrottle]
     permission_classes=[AllowAny]
     
     @action(detail=False,methods=['post'])
@@ -59,6 +61,7 @@ class generateCode(viewsets.ViewSet):
     
     @action(detail=False,methods=['post'])
     def resendCode(self,request):
+       throttle_classes=[OtpBurstThrottle,OtpSustainedThrottle]
        phone=request.data.get('phone')
        captcha_token=request.data.get('captcha_token')
        print(phone,captcha_token,'<---------------------------')
