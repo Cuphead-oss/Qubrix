@@ -26,9 +26,11 @@ SECRET_KEY = os.environ.get("Qubrix_Key")
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '18.61.24.153',
     'qubrixassociates.in',
     'www.qubrixassociates.in',
-    '18.61.24.153',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
