@@ -23,13 +23,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("Qubrix_Key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    'qubrixassociates.in',
+    'www.qubrixassociates.in',
+    '18.61.24.153',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://qubrixassociates.in',
+    'https://www.qubrixassociates.in',
+]
 
 CORS_ALLOWED_ORIGINS = [
     "null",
 ]
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'qubrix_db',
         'USER': 'qubrix_user',
-        'PASSWORD': os.environ.get("Qubrix_db_pass"),
+        'PASSWORD': os.environ.get("qubrix_pass_db"),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
